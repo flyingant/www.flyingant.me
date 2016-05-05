@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="layout" content="main"/>
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+		<title>Liu Cheng | Developer | Wuhan</title>
+		<link rel="stylesheet" href="me.css">
+	</head>
+	<body>
+    <div id="background"></div>
+
+    <div class="overlay"></div>
+
+    <div id="container">
+        <div id="age"></div>
+        <img id="avatar" src="images/social_small.png" title="JUST CALL ME 'MaYi' !"/>
+
+        <p id="name">Liu Cheng</p>
+
+        <p id="introduction">Developer live at Wuhan, China</p>
+        <ul id="navigator">
+            <li><a href="#" target="_blank">CV</a></li>
+            <li><a href="http://cn.linkedin.com/in/flyingant" target="_blank">Profile</a></li>
+        </ul>
+	</div>
+	<script>
+        var tick = function* () {
+            while (true) {
+                yield "<span>Born | </span>" + parseInt((+new Date() - new Date("1989-10-16")) / 1000)
+            }
+        }();
+		window.setInterval(function () {
+            document.getElementById("age").innerHTML = tick.next().value;
+		}, 1000);
+        console.log("Wanna make a new friend or treat me a beer? Shoot me message to %c'liucheng@flyingant.me'", 'color: red');
+	</script>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: flyingant;
+    src: url("./font/OpenSans-Light.ttf");
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url("./images/bg.jpg");
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+#container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    color: snow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "flyingant";
+}
+
+#age {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#age:hover {
+    font-size: 14px;
+}
+
+#navigator {
+    padding: 0;
+    list-style: none;
+}
+
+#navigator li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+#navigator li a {
+    font-size: 12px;
+    color: snow;
+    text-decoration: none;
+}
+
+#navigator li a:hover {
+    color: snow;
+    text-decoration: underline;
+}
+
+#avatar {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #cccccc;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#name {
+    width: 220px;
+    text-align: center;
+    padding: 0;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#introduction {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
