@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="x-ua-compatible" content="ie=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>Liu Cheng | Front End Developer | Shanghai</title>
+        <title><%= htmlWebpackPlugin.options.title %></title>
         <meta name="description" content="Liu Cheng, a Front End Developer work at Shanghai, China" />
         <meta property="og:title" content="Liu Cheng | Front End Developer | Shanghai" />
         <meta property="og:type" content="website" />
@@ -31,9 +31,6 @@
         <meta name="msapplication-square150x150logo" content="http://assets.flyingant.me/favicon/mstile-150x150.png" />
         <meta name="msapplication-wide310x150logo" content="http://assets.flyingant.me/favicon/mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="http://assets.flyingant.me/favicon/mstile-310x310.png" />
-        <link rel="stylesheet" href="me.css" />
-        <script src="jquery-1.11.3.min.js" type="text/javascript"></script>
-        <script src="particles.min.js" type="text/javascript"></script>
 	</head>
 	<body>
     <div id="background"></div>
@@ -45,7 +42,7 @@
                 </ul>
             </div>
         <div id="age"></div>
-        <img id="avatar" src="images/social_small.png" title="JUST CALL ME 'MaYi' !"/>
+        <img id="avatar" src="../images/social_small.png" title="JUST CALL ME 'MaYi' !"/>
 
         <p id="name">Liu Cheng</p>
 
@@ -55,20 +52,5 @@
             <li><a href="http://cn.linkedin.com/in/flyingant" target="_blank">LinkedIn</a></li>
         </ul>
     </div>
-    <div id="particles"></div>
-	<script>
-        $(document).ready(function(){
-            var tick = function* () {
-                while (true) {
-                    yield "<span>Born | </span>" + parseInt((+new Date() - new Date("1989-10-16")) / 1000)
-                }
-            }();
-            window.setInterval(function () {
-                document.getElementById("age").innerHTML = tick.next().value;
-            }, 1000);
-            particlesJS.load('particles', 'particles.json');
-            console.log("Wanna make a new friend or treat me a beer? Shoot me message to %c'liucheng@flyingant.me'", 'color: red');
-        });
-	</script>
 	</body>
 </html>
