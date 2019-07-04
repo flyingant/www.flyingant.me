@@ -71,7 +71,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Liu Cheng | Front End Developer | Shanghai',
       template: 'src/index.template.html'
-    }),
-    new CopyWebpackPlugin([{from: './assets/images', to: './assets/images'}])
+    })
   ]
 };

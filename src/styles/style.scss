@@ -9,10 +9,10 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url("../../assets/images/debut_light_@2X.png") repeat;
 
   .box {
     position: relative;
@@ -99,6 +99,29 @@ body {
     }
     .piggy-nibble {
       display: block;
+    }
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    font-size: 16px;
+    padding: 5px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        margin: 0 2px;
+        a {
+          color: #000000;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
