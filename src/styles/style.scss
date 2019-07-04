@@ -1,0 +1,95 @@
+@font-face {
+  font-family: flyingant;
+  src: url("../../assets/font/Cylla.ttf");
+}
+
+body {
+  font-family: flyingant;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    position: relative;
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .piggy {
+      width: 88px;
+      height: 62px;
+      transform: scale(0.6); }
+
+    .piggy-walk {
+      display: block;
+      background: url(https://zoo.flyingant.me/5a72ff724ca4afa544de8e949371629d.png) 100% 0 no-repeat;
+      animation: anim 1s steps(23) infinite,movelr 120s linear reverse infinite;
+      -webkit-animation: anim 1s steps(23) infinite,movelr 120s linear reverse infinite;
+    }
+
+    .piggy-nibble {
+      display: none;
+      background: url(https://zoo.flyingant.me/c1079bfe431df8e6863a0d6f0a26999a.png) 100% 0 no-repeat;
+      animation: anim-nibble 2s steps(59) alternate infinite;
+      -webkit-animation: anim-nibble 2s steps(59) alternate infinite;
+    }
+
+    @-webkit-keyframes anim-nibble{
+      from{background-position:0 0}
+      to{background-position:-5192px 0}
+    }
+    @keyframes anim-nibble{
+      from{background-position:0 0}
+      to{background-position:-5192px 0}
+    }
+    @-webkit-keyframes movelr{
+      from{left:-2%}
+      to{left:101%}
+    }
+    @keyframes movelr{
+      from{left:-2%}
+      to{left:101%}
+    }
+    @-webkit-keyframes anim{
+      from{background-position:0 0}
+      to{background-position:100% 0}
+    }
+    @keyframes anim{
+      from{background-position:0 0}
+      to{background-position:100% 0}
+    }
+
+    .desc {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      #name {
+        text-align: center;
+        font-size: 42px;
+      }
+
+      #introduction {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+  }
+
+  .box:hover {
+    .piggy-walk {
+      display: none;
+    }
+    .piggy-nibble {
+      display: block;
+    }
+  }
+}
