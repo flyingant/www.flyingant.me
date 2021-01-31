@@ -10,9 +10,10 @@ body {
   height: 100vh;
   margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/images/debut_light_@2X.png") repeat;
+  background-color: #f8dc08;
 
   .box {
     position: relative;
@@ -30,18 +31,21 @@ body {
     .piggy {
       width: 88px;
       height: 62px;
-      transform: scale(0.6); }
+      transform: scale(0.6); 
+    }
 
     .piggy-walk {
       display: block;
-      background: url(https://zoo.flyingant.me/5a72ff724ca4afa544de8e949371629d.png) 100% 0 no-repeat;
+      margin-left: 12px;
+      background: url(https://cdn-studio.oss-cn-hangzhou.aliyuncs.com/files/mayi/pig-walking.png) 100% 0 no-repeat;
       animation: anim 1s steps(23) infinite,movelr 120s linear reverse infinite;
       -webkit-animation: anim 1s steps(23) infinite,movelr 120s linear reverse infinite;
     }
 
     .piggy-nibble {
       display: none;
-      background: url(https://zoo.flyingant.me/c1079bfe431df8e6863a0d6f0a26999a.png) 100% 0 no-repeat;
+      margin-left: 12px;
+      background: url(https://cdn-studio.oss-cn-hangzhou.aliyuncs.com/files/mayi/pig-nibble.png) 100% 0 no-repeat;
       animation: anim-nibble 2s steps(59) alternate infinite;
       -webkit-animation: anim-nibble 2s steps(59) alternate infinite;
     }
@@ -72,22 +76,19 @@ body {
     }
 
     .desc {
+      text-align: center;
       p {
         margin: 0;
         padding: 0;
       }
-      #name {
+
+      #title {
+        font-size: 28px;
         text-align: center;
-        font-size: 42px;
       }
 
       #nickname {
-        font-size: 24px;
-        text-align: center;
-      }
-
-      #introduction {
-        font-size: 24px;
+        font-size: 56px;
         text-align: center;
       }
     }
@@ -121,6 +122,24 @@ body {
           font-weight: bold;
           text-decoration: underline;
         }
+      }
+    }
+  }
+
+  .say-hello {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 400;
+    font-size: 24px;
+    padding: 5px;
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      &:hover {
+        color: #000000;
+        font-weight: normal;
       }
     }
   }

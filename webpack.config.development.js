@@ -66,7 +66,7 @@ module.exports = {
     extractLib,
     extractCustomerStyle,
     new HtmlWebpackPlugin({
-      title: 'Liu Cheng | Front End Developer | Shanghai',
+      title: 'Web Developer | MaYi',
       template: 'src/index.template.html'
     })
   ]
